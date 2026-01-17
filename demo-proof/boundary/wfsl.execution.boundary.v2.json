@@ -1,0 +1,44 @@
+{
+  "schema": "wfsl.execution.boundary.v2",
+  "phase": 2,
+  "name": "EBE Phase 2 – Ingress Sealing",
+  "status": "locked",
+  "invariants": {
+    "unsigned_input": "deny",
+    "implicit_execution": "deny",
+    "dynamic_dependency_loading": "deny",
+    "side_effects": "deny"
+  },
+  "ingress": {
+    "required_schema": "wfsl.ingress.v0",
+    "accepted_kinds": [
+      "wfsl.edge.verdict.submit"
+    ],
+    "payload_constraints": {
+      "verdict_schema": "wfsl.verdict.v2.1",
+      "decision_required": true,
+      "hash_required": true,
+      "signature_required": true
+    }
+  },
+  "boundary": {
+    "mode": "explicit",
+    "nullify": [
+      "process",
+      "require",
+      "import",
+      "eval",
+      "Function",
+      "globalThis.fetch"
+    ]
+  },
+  "outcome": {
+    "on_pass": "ALLOW",
+    "on_fail": "DENY"
+  },
+  "audit": {
+    "emit_evidence": true,
+    "evidence_format": "wfsl.evidence.jsonl",
+    "deterministic": true
+  }
+}

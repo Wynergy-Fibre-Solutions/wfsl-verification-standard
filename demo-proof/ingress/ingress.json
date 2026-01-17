@@ -1,0 +1,12 @@
+{
+  "schema": "wfsl.ingress.v0",
+  "kind": "wfsl.edge.verdict.submit",
+  "payload": {
+    "schema": "wfsl.verdict.v2.1",
+    "decision": "ALLOW",
+    "hash": "257b79a36cd4f3eefda12b1c6034f0f5465523cf99f1752ff06fb77d43e22166",
+    "signature": "FyhdTEuEC5MfySvKRwWrk5JjRgOt9WCwQ6eXJyZi1jVmiiZrTTludoulAVSubIy9wz8Yw3QZAoJ9O9Ulgkv1AA==",
+    "signatureAlg": "ed25519",
+    "timestamp": "2026-01-17T16:27:47.335Z"
+  }
+}
