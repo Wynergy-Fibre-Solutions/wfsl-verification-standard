@@ -1,0 +1,24 @@
+﻿{
+  "wfsl": {
+    "tier": "tier-1",
+    "status": "elite",
+    "freeze": {
+      "name": "WFSL Platform Freeze v1",
+      "tag": "wfsl-freeze-v1"
+    },
+    "governance": {
+      "authority": "Wynergy Fibre Solutions Ltd",
+      "repo": "wfsl-core-governance",
+      "change_control": "RFC-only"
+    },
+    "verification": {
+      "standard": "wfsl-verification-standard",
+      "deterministic": true,
+      "hash": "sha256"
+    },
+    "licence": {
+      "boundary": "explicit",
+      "governed": true
+    }
+  }
+}
